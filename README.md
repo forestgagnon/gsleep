@@ -17,6 +17,14 @@ gsleep 5m
 # Sleep 3 hours and 20 minutes
 gsleep 3h20m && say check on that thing
 ```
+
+### Omit units for backwards-compatible mode with sleep
+
+```bash
+# Sleep 3 seconds
+gsleep 3
+```
+
 ## Duration syntax
 
 https://pkg.go.dev/time#ParseDuration
