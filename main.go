@@ -16,11 +16,11 @@ func main() {
 }
 
 func duration(input string) time.Duration {
-	if seconds, err := strconv.ParseInt(os.Args[1], 10, 64); err == nil {
+	if seconds, err := strconv.ParseInt(input, 10, 64); err == nil {
 		return time.Duration(seconds) * time.Second
 	}
 
-	duration, err := time.ParseDuration(os.Args[1])
+	duration, err := time.ParseDuration(input)
 	if err != nil {
 		log.Fatalf("invalid Go duration syntax: %s", err.Error())
 	}
